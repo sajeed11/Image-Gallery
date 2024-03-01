@@ -16,6 +16,7 @@ const BasicPhotoSchema = z.object({
   src: z.object({
     large: z.string(),
   }),
+  alt: z.string(),
   blurredDataUrl: z.string().optional(),
 });
 
