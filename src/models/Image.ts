@@ -20,10 +20,10 @@ const BasicPhotoSchema = z.object({
   blurredDataUrl: z.string().optional(),
 });
 
-export const ImagesSchemaWithPhtos = BasicImageSchema.extend({
+export const ImagesSchemaWithPhotos = BasicImageSchema.extend({
   photos: z.array(BasicPhotoSchema)
 })
 
 export type Photo = z.infer<typeof BasicPhotoSchema>;
 
-export type ImagesResults = z.infer<typeof ImagesSchemaWithPhtos>;
+export type ImagesResults = z.infer<typeof ImagesSchemaWithPhotos>;
