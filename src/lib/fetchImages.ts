@@ -1,5 +1,5 @@
 import { ImagesResults } from "@/models/Image";
-import { ImagesSchemaWithPhtos } from "@/models/Image";
+import { ImagesSchemaWithPhotos } from "@/models/Image";
 import env from "./env";
 
 export default async function fetchImages(url: string): Promise<ImagesResults | undefined> {
@@ -16,7 +16,7 @@ export default async function fetchImages(url: string): Promise<ImagesResults | 
     // console.log(imagesResults);
 
     // Parse تحليل البيانات على حسب هيكل محدد the data with Zod schema
-    const parsedData = ImagesSchemaWithPhtos.parse(imagesResults);
+    const parsedData = ImagesSchemaWithPhotos.parse(imagesResults);
 
     if (parsedData.total_results === 0) return undefined;
 
